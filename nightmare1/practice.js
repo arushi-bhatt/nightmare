@@ -9,12 +9,10 @@ console.log(dom.window.document.querySelector("p").textContent); // "Hello world
 
 nightmare
   .goto('http://www.seleniumeasy.com/test/basic-first-form-demo.html')
-  .type('#user-message', 'Hello My Name is Arushi Bhatt ,:)')
-  .click('#search_button_homepage')
-  //.wait('#zero_click_wrapper .c-info__title a')
-  //.evaluate(function () {
-   // return document.querySelector('#zero_click_wrapper .c-info__title a').href;
-  //})
+  .type('#sum1', '9')
+  .type("#sum2", "9")
+  .click('#gettotal > button')
+  .wait(3000)
   .end()
   .then(function (result) {
     console.log(result);
@@ -22,4 +20,9 @@ nightmare
   .catch(function (error) {
     console.error('Search failed:', error);
   });
+  
+
+
+  //*[@id="get-input"]/button
+
   
